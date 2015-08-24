@@ -1,0 +1,10 @@
+#!/usr/bin/perl -w
+use 5.012;
+use warnings;
+
+my @rocks = qw/ bedrock slate rubble granite/;
+while( my( $index,$value ) = each @rocks){
+	say "$index: $value";
+}
+
+#You have to use the variable with keyword "my"

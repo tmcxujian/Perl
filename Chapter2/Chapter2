@@ -1,0 +1,41 @@
+Assessing Elements of an Array from an index.
+
+$#ArrayName returns the length of that array;
+
+() empty list;
+(1...1000) returns a list of 100 integers;
+(5...1) returns an empty list;
+
+qw(fred barney betty wilma dino) could help generate without extra quote marks
+qw{/usr/dict/words /home/rootbeer/.ispell_english} handles a list of filenames;
+
+list pop() and push(), parenthess is optional as long as it doesn't make any difference;
+pop() takes the last element off of an array and return that value;
+push() adds an element into the end of array;
+
+list shift() and unshift() performs the corresponding actions on the start of an array instead of the end of array;
+
+list splice() has four arguments and could remove/add elements in the middle;
+
+When someone needs to interpolating arrays into strings:$email = "fred\@bedrock.edu" or 'fred@berock.edu'
+
+Foreach Control Structure
+foreach $rock (@rock): $rock is each value and @rock is entire array/list;
+under this foreach loop, it doesn't change the original $rock value. After this loop, $rock is still the original value;
+
+Foreach: if omit control variable, we could use $_ to represent current variable;
+
+Reverse Operator: takes a list of values and returns the list with opposite order; reverse @fred doesn't affect @fred
+
+Sort Operator: sort the list and return that list
+
+
+Each Operator: each time you call each on array, it returns two values for the next element in the array - index of that value and value itself, details for this could refer to EachOperatorExample
+
+
+Scalar and List Context:
+Using List-Producing Expressions in Scalar Context
+Using List-Producing Expressions in List Context
+Forcing Scalar Context: using fake function scalar
+
+

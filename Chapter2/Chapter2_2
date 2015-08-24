@@ -1,0 +1,21 @@
+#Write a program that reads a list of numbers (on separate lines) until end-of- input and then prints for each number the corresponding person’s name from the list shown below. (Hardcode this list of names into your program. That is, it should appear in your program’s source code.) For example, if the input numbers were 1, 2, 4, and 2, the output names would be fred, betty, dino, and betty:
+
+#!/usr/bin/perl -w
+use warnings;
+
+@lines = qw/ fred betty barney dino wilma pebbles bamm-bamm /;
+
+print "Enter your input number:\n";
+@numbers = <STDIN>;
+
+foreach $number (@numbers){
+	print $lines[$number-1]." ";
+}
+
+#Another way to do this is as followings:
+
+print "Enter some numbers from 1 to 7, one per line, then press Ctrl-D:\n";
+chomp(@numbers = <STDIN>);
+foreach (@numbers){
+	print "$lines[$_-1]\n";
+}
