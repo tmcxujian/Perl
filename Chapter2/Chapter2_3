@@ -1,1 +1,11 @@
 #Writeaprogramthatreadsalistofstrings(onseparatelines)untilend-of-input. Then it should print the strings in code point order. That is, if you enter the strings fred, barney, wilma, betty, the output should show barney betty fred wilma. Are all of the strings on one line in the output or on separate lines? Could you make the output appear in either style?
+
+#!/usr/bin/perl -w
+use warnings;
+
+chomp(@lines = <STDIN>);
+@sorted = sort @lines;
+print "@sorted\n";
+
+#previous one get rid of the end new line symbol, the following one does not
+print sort <STDIN>;
